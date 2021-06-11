@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: database
+  username: root
+  password: root
+  pool: 5
+
+development:
+  <<: *default
+  database: ror_development
+
+test:
+  <<: *default
+  database: ror_test
